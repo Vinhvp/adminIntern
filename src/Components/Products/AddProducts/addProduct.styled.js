@@ -6,7 +6,7 @@ export const EditProducts = styled.div`
     display: flex;
     flex-direction: column;
     box-shadow: 0 10px 24px 0 rgba(0, 0, 0, 0.08);
-    width: 1595px;
+    width: 85vw;
     .EditProducts{
         &Headers{
             display: flex;
@@ -47,7 +47,7 @@ export const EditProducts = styled.div`
 `
 export const Header = styled.div`
     height: 184px;
-    width: 85.6vw;
+    width: 85vw;
     padding: 32px 20px 0 20px;
     text-align: left;
     display: flex;

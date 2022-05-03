@@ -24,7 +24,7 @@ const AddProduct = () => {
         categories :'',
         brand: '',
         price: '',
-        quantity: ''
+        quantity: 0,
     })
 
 
@@ -34,7 +34,8 @@ const AddProduct = () => {
             img: imgLink[0],
             title: inputValue.name,
             price: inputValue.price,
-            category: category 
+            category: category,
+            quantity: inputValue.quantity 
         }
         axios.post('http://localhost:7000/admin/updateProduct',{
             products: product
@@ -118,7 +119,7 @@ const AddProduct = () => {
                 </styled.itemOrderForm>
                 <styled.itemOrderForm style={{height: '50px'}}>
                         <h3>QUANTITY</h3>
-                        <styled.Input onChange={handleChange} type='text' name='quantity' placeholder='enter name quantity..'></styled.Input>
+                        <styled.Input onChange={handleChange} type='number' name='quantity' placeholder='enter name quantity..'></styled.Input>
                         
                 </styled.itemOrderForm>
                 <styled.itemOrderForm style={{height: '50px'}}>
@@ -126,7 +127,7 @@ const AddProduct = () => {
                         <styled.Input onChange={handleChange} type='text' name='description' placeholder='Model wearing, full colors' disabled></styled.Input>
                         
                 </styled.itemOrderForm>
-                <div style={{display: 'flex', position: 'absolute', right:'320px', bottom:'-250px'}}>
+                <div style={{display: 'flex', justifyContent:'flex-end',width:"88%", margin:"50px"}}>
                     <Button name='Cancel' w='180px' h='48px' color='var(--pale-orange)' p='12px 55px 12px 54px'></Button>
                     <Button onClick={handleComplete} name='Complete' w='180px' h='48px' bgcolor='var(--pale-orange)' color='var(--white-two)' p='12px 55px 12px 54px'></Button>
                 </div>

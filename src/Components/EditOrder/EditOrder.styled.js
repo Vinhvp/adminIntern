@@ -2,7 +2,8 @@ import styled from 'styled-components';
 export const EditOrder = styled.div`
     
     background: var(--white);
-    height: 100vh;
+    height: 85vh;
+    width: 83.6vw;
     margin: 32px 20px 26px 20px;
     display: flex;
     flex-direction: column;
@@ -37,9 +38,13 @@ export const EditOrder = styled.div`
                 }
             }
             &_total{
-                margin-right: 209px;
-                div:first-child{
-                    margin-left: 84px;
+                margin-right: 220px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                .total{
+                    margin-right: 80px;
                 }
                 div:nth-child(2){
                     display: flex;

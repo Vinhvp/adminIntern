@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 export const NavB = styled.div`
-    height: 100vh;
+    height: 130vh;
     width: 220px;
     box-shadow: 1px 0 0 0 var(--white-three);
     background-color: var(--white-two);

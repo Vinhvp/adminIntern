@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 export const EditProducts = styled.div`
+    
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -18,7 +19,7 @@ export const EditProducts = styled.div`
     position: relative;
     .pagination{
         position: absolute;
-        left: 25px;
+        left: 41px;
         bottom: -30px;
         width: 181px;
         height: 20px;
@@ -58,6 +59,11 @@ export const EditProducts = styled.div`
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
+        img{
+            width: 40px;
+            height: 60px;
+            object-fit: cover;
+        }
     }
     .Product{
         &_info{

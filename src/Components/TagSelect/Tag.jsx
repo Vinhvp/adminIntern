@@ -64,6 +64,7 @@ export default function Tag(props) {
           id="demo-multiple-chip"
           value={personName}
           onChange={handleChange}
+          multiple
           input={<OutlinedInput id="select-multiple-chip" label="Size" />}
           renderValue={(selected) => (
             <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5 }}>

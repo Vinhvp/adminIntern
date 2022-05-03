@@ -14,10 +14,10 @@ const EditOrder = () => {
                 </div>
                 
                 <div className="EditOrderHeaders_total">
-                    <div>TOTAL</div>
+                    <div className='total'>TOTAL</div>
                     <div>
                         <div>STATUS</div>
-                        <div><ArrowDropDownIcon></ArrowDropDownIcon></div>
+                        <div style={{marginRight: '42px'}}><ArrowDropDownIcon></ArrowDropDownIcon></div>
                     </div>
                 </div>
             </div>

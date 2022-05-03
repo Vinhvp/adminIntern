@@ -63,7 +63,6 @@ const EditProducts = () => {
                 <ArrowLeftIcon onClick={leftArrow} style={{cursor:'pointer'}}></ArrowLeftIcon>
                 <div>{page}/{Math.floor(products.length/7)+1}</div>
                 <ArrowRightIcon onClick={rightArrow} className='rightIcon' style={{cursor:'pointer'}}></ArrowRightIcon>
-
             </div>
         </styled.EditProducts>
      );
