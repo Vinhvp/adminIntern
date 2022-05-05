@@ -13,7 +13,7 @@ export const Edit = styled.div`
     flex-direction: column;
     justify-content: flex-start;
     height: 115vh;
-    width: 100%;
+    width: 100vw;
     .edit{
         width: 83vw;
         height: 130vh;

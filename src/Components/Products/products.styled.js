@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 export const EditProducts = styled.div`  
     background: var(--white);
-    height: 86vh;
-    margin: 32px 20px 26px 20px;
+    height: 109vh;
+    margin: 32px 20px 0px 20px;
     display: flex;
     flex-direction: column;
     box-shadow: 0 10px 24px 0 rgba(0, 0, 0, 0.08);

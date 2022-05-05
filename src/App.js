@@ -7,13 +7,15 @@ import { useEffect } from 'react';
 
 
 function App() {
- 
+  const token = localStorage.getItem('token');
+
   return (
     <div className="App">
       <Routes>
 
         <Route path='/' element={<Login />}></Route>
-        <Route path='/admin/dashboard/' element={<Dashboard />}></Route>
+        {token && (<Route path='/admin/dashboard/' element={<Dashboard />}></Route>)}
+
       </Routes>
         
     </div>

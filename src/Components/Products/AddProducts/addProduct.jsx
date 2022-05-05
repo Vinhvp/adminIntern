@@ -25,9 +25,16 @@ const AddProduct = () => {
         brand: '',
         price: '',
         quantity: 0,
+        description: ''
     })
-
-
+    
+    const [flag,setFlag] = useState(false);
+    useEffect(()=>{
+        if(Boolean(inputValue.name) && Boolean(category) && Boolean(inputValue.price) && Boolean(inputValue.quantity) && Boolean(size)){
+            setFlag(true);
+        }
+    },[inputValue,category,size,inputValue.quantity,inputValue.price])
+    
     
     const handleComplete = () =>{
         const product = {
@@ -35,18 +42,15 @@ const AddProduct = () => {
             title: inputValue.name,
             price: inputValue.price,
             category: category,
-            quantity: inputValue.quantity 
+            quantity: inputValue.quantity,
+            description: inputValue.description,
+            sold: 0
         }
         axios.post('http://localhost:7000/admin/updateProduct',{
             products: product
         })
-        .then((res)=>{
-            if(res.data.status){
-                alert('Your product is completely!!');
-                window.location.replace('/admin/dashboard');
-            }
-        })
-        
+        alert('Your product is completely!!');
+        window.location.replace('/admin/dashboard');
     }
    
     const img = imgLink.map((e,i)=>{
@@ -64,7 +68,7 @@ const AddProduct = () => {
 
     return ( <>
     
-        <styled.EditProducts>
+        <styled.AddProduct>
             <styled.Header>
                 <div className='Header_info'>
                     <h1>ADD PRODUCTS</h1>
@@ -124,15 +128,15 @@ const AddProduct = () => {
                 </styled.itemOrderForm>
                 <styled.itemOrderForm style={{height: '50px'}}>
                         <h3>DESCRIPTION</h3>
-                        <styled.Input onChange={handleChange} type='text' name='description' placeholder='Model wearing, full colors' disabled></styled.Input>
+                        <styled.Input onChange={handleChange} type='text' name='description' placeholder='Model wearing, full colors..'></styled.Input>
                         
                 </styled.itemOrderForm>
                 <div style={{display: 'flex', justifyContent:'flex-end',width:"88%", margin:"50px"}}>
                     <Button name='Cancel' w='180px' h='48px' color='var(--pale-orange)' p='12px 55px 12px 54px'></Button>
-                    <Button onClick={handleComplete} name='Complete' w='180px' h='48px' bgcolor='var(--pale-orange)' color='var(--white-two)' p='12px 55px 12px 54px'></Button>
+                    {flag ? (<Button onClick={handleComplete} name='Complete' w='180px' h='48px' bgcolor='var(--pale-orange)' color='var(--white-two)' p='12px 55px 12px 54px'></Button>) : (<Button name='Complete' w='180px' h='48px' bgcolor='grey' color='var(--white)' p='12px 55px 12px 54px' disabled='disabled'></Button>)}
                 </div>
             </styled.orderForm>
-        </styled.EditProducts>
+        </styled.AddProduct>
     </> );
 }
  

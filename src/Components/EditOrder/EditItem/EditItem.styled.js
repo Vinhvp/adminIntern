@@ -83,15 +83,19 @@ export const orderItem = styled.div`
     .Name{
         width: 300px;
         padding-left: 18px;
-        margin-left: 5px;
     }
     .Price{
         width: 37px;
-        margin-left:330px;
+        margin-left:184px;
     }
     .Status{
         margin-left: 77px;
         margin-right: 112px;
-        
+        border-radius: 12px;
+        background-color: var(--pea-green);
+        text-align: center;
+        color: var(--white);
+        width: 70px;
+        height: 20px;
     }
 `

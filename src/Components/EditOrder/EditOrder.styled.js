@@ -2,9 +2,9 @@ import styled from 'styled-components';
 export const EditOrder = styled.div`
     
     background: var(--white);
-    height: 85vh;
+    height: 100vh;
     width: 83.6vw;
-    margin: 32px 20px 26px 20px;
+    margin: 32px 20px 0px 10px;
     display: flex;
     flex-direction: column;
     box-shadow: 0 10px 24px 0 rgba(0, 0, 0, 0.08);

@@ -1,12 +1,12 @@
 import styled from 'styled-components';
-export const EditProducts = styled.div`  
+export const AddProduct = styled.div`  
     background: var(--white);
     height: 100vh + 50vh;
     margin: 32px 20px 26px 20px;
     display: flex;
     flex-direction: column;
     box-shadow: 0 10px 24px 0 rgba(0, 0, 0, 0.08);
-    width: 85vw;
+    width: 80vw;
     .EditProducts{
         &Headers{
             display: flex;
@@ -58,6 +58,7 @@ export const Header = styled.div`
         justify-content: space-between;
         align-items: center;
         margin-bottom: 36px;
+        margin-right: 100px;
         h1{
             width: 400px;
             height: 36px;
@@ -132,7 +133,7 @@ export const itemOrderForm = styled.div`
         width: 54px;
         height: 14px;
         margin-right: 50px;
-        margin-left: 270px;
+        margin-left: 70px;
         font-family: Montserrat;
         font-size: 12px;
         font-weight: bold;
